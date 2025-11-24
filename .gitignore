@@ -1,0 +1,90 @@
+# -----------------------
+# Node.js
+# -----------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# -----------------------
+# Environment Variables
+# -----------------------
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# For Vite
+.env.*
+!.env.example
+
+# -----------------------
+# Logs
+# -----------------------
+logs/
+*.log
+log.txt
+
+# -----------------------
+# Build Output
+# -----------------------
+dist/
+build/
+.cache/
+.vite/
+
+# -----------------------
+# OS Specific Files
+# -----------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------
+# Editor Junk
+# -----------------------
+.vscode/
+.idea/
+*.swp
+
+# -----------------------
+# ImageKit Temporary Uploads (Multer)
+# -----------------------
+uploads/
+temp/
+*.tmp
+
+# -----------------------
+# MongoDB
+# -----------------------
+*.mongodb
+dump/
+data/
+
+# -----------------------
+# Coverage
+# -----------------------
+coverage/
+
+# -----------------------
+# React (Vite)
+# -----------------------
+*.local
+*.pid
+*.pid.lock
+*.sage
+*.tsbuildinfo
+
+# -----------------------
+# Optional: Ignore build files pushed to server
+# -----------------------
+server/public/uploads/
+client/public/uploads/
+
+# -----------------------
+# Optional: PM2 Logs
+# -----------------------
+pm2-logs/
