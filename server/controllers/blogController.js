@@ -2,7 +2,7 @@ import fs from 'fs';
 import imagekit from '../configs/imageKit.js';
 import Blog from '../configs/models/blogModel.js'
 import Comment from '../configs/models/comment.js';
-import { join } from 'path';
+import main from '../configs/gemini.js';
 
 
 export const addBlog = async (req, res) => {
@@ -21,7 +21,6 @@ export const addBlog = async (req, res) => {
 
     const fileBuffer = fs.readFileSync(imageFile.path);
 
-    // Upload to ImageKit
     const response = await imagekit.upload({
       file: fileBuffer,
       fileName: imageFile.originalname,
@@ -128,4 +127,14 @@ try{
 }catch(error){
     res.json({success:false, message: error.message})
 }
+}
+
+export const generateContent= async(req, res)=>{
+  try{
+    const {prompt}= req.body;
+    const content= await main(prompt + 'Generate a blog content for this topic in simple text format')
+    res.json({success:true, content})
+  }catch(error){
+    res.json({success: false, message: error.message})
+  }
 }
