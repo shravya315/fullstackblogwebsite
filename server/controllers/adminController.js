@@ -33,7 +33,7 @@ export const getAllBlogsAdmin= async(req, res)=>{
 export const getAllComments= async(req, res)=>{
   try{
     const comment= await Comment.find({}).populate("blog").sort({createdAt:-1})
-    res.json({success:true, comments})
+    res.json({success:true, comment})
   }catch(error){
     res.json({success:false, message:error.message})
   }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import { useAppContext } from "../../context/AppContext";
 
 const Layout = () => {
 
@@ -17,7 +18,7 @@ const Layout = () => {
     <>
       <div className="flex items-center justify-between py-2 h-[70px] px-4 sm:px-12 border-b border-gray-200">
         <img
-          src=""
+          src="https://i.pinimg.com/originals/f6/fe/f9/f6fef919159fc1f8bf9c7ff56fe82954.jpg"
           alt="logo"
           className="w-32 sm:w-40 cursor-pointer"
           onClick={() => navigate("/")}
