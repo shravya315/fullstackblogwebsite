@@ -9,12 +9,12 @@ const Navbar = () => {
 
 
   return (
-    <div className="flex justify-between items-center py-5 mx-8 sm:mx-20 xl:mx-32">
+    <div className="flex justify-between items-center shadow p-5 sticky top-0 bg-gray-100 z-100">
       <img
         onClick={() => navigate("/")}
         src="https://i.pinimg.com/originals/f6/fe/f9/f6fef919159fc1f8bf9c7ff56fe82954.jpg"
         alt="logo"
-        className="w-2 sm:w-14 cursor-pointer" 
+        className="w-14 cursor-pointer" 
       />
       <button
         onClick={() => navigate("/admin")}

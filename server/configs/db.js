@@ -1,13 +1,12 @@
 import mongoose from "mongoose";
 
-const connectDB= async()=>{
-    try{
-        mongoose.connection.on('connected',()=>
-             console.log("Database Connected"));
-        await mongoose.connect(`${process.env.MONGODB_URI}/fullstackblogWebsite`);
-    }catch(error){
-        console.log(error.message);
-    }
-}
-
-export default connectDB;
+export const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      writeConcern: { w: "majority" }
+    });
+    console.log("MongoDB Connected");
+  } catch (error) {
+    console.log(error);
+  }
+};
